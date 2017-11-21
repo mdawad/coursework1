@@ -36,7 +36,7 @@ class Client {
       if (Choiceshape == 1)
       {
         System.out.println("Rectangle");
-                System.out.println("What is the name of the Rectangle");
+                System.out.println("Input the name of the Rectangle: \n");
                 String rectname=in.next();
                 System.out.println("Enter the length");
                 Double rectlength=in.nextDouble();
@@ -53,7 +53,7 @@ class Client {
       if (Choiceshape == 2)
       {
           System.out.println("Circle");
-          System.out.println("What is the name of the Circle");
+          System.out.println("Input the name of the Circle: \n");
           String circlename = in.next();
           System.out.println("Radius of the circle: ");
           double circleradius = in.nextDouble();
@@ -70,7 +70,7 @@ class Client {
       if (Choiceshape == 3)
        {
           System.out.println("Triangle");
-          System.out.println("What is the name of the Triangle");
+          System.out.println("Input the name of the Triangle: \n");
           String tname = in.next();
           System.out.println("Enter the first side:");
           double tside1 = in.nextDouble();
@@ -92,7 +92,7 @@ if (Choicedimension == 2)
       if (Choiceshape == 1)
       {
           System.out.println("Sphere");
-          System.out.println("Enter the Name of the sphere :");
+          System.out.println("Input the name of the sphere: \n");
           String sname = in.next();
           System.out.println("Enter the radius :");
           double sradius = in.nextDouble();
@@ -106,7 +106,7 @@ if (Choicedimension == 2)
       {
           System.out.println("Cyliinder");
           
-          System.out.println("Enter the Name of the Cylinder :");
+          System.out.println("Input the name of the Cylinder: \n");
           String cname = in.next();
           System.out.println("Enter the radius:");
           double cradius = in.nextDouble();

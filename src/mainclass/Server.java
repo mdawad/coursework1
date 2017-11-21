@@ -35,20 +35,20 @@ class Server {
             
             if (twoD instanceof Rectangle){
                 Rectangle r = (Rectangle) twoD;
-                System.out.println("Length of rectangle from Client: " + r.length +  "Breadth of rectangle recieved from client" + r.breadth);
+                System.out.println("Length: " + r.length +  "Breadth: " + r.breadth);
             }
             else if (twoD instanceof Circle){
                 Circle c =(Circle) twoD;
-                System.out.println("Radius received from Client: "+ c.Radius);
+                System.out.println("Radius: "+ c.Radius);
              }
             else if (twoD instanceof Triangle){
                Triangle t = (Triangle)twoD;
-               System.out.println("First Side of the Triangle: " + t.side1);
-               System.out.println("Second Side of the Triangle: " + t.side2);
-               System.out.println("Third Side of the Triangle " + t.side3);
+               System.out.println("First Side: " + t.side1);
+               System.out.println("Second Side: " + t.side2);
+               System.out.println("Third Side: " + t.side3);
             }
-            System.out.println("The area of the shape is :" + area);
-            System.out.println("The perimeter of the shape is :" + perimeter);
+            System.out.println("Area of the shape :" + area);
+            System.out.println("Perimeter of the shape:" + perimeter);
             
    }
    
