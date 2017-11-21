@@ -21,10 +21,6 @@ public class Cylinder extends ThreeDShapes {
         return area;
     }
 
-    /**
-     *
-     * @return
-     */
     @Override
     public double getVolume() {
       double volume = (Math.PI * Radius * Radius * Height);
