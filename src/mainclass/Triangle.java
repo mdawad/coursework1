@@ -23,24 +23,20 @@ public class Triangle extends TwoD{
      * @param s3
      */
     public Triangle(String name, double s1, double s2, double s3) {
-        super(name);
+        super(name, 3);
        side1 = s1;
        side2 = s2;
        side3 = s3;
     }
   
-    /**
-     *
-     */
+  
+       @Override
     public void displayDescription() {
         super.displayDescription();
         System.out.println("\t I'm a triangle");
     }
 
-    /**
-     *
-     * @return
-     */
+ 
     @Override
     public double getArea(){
     
@@ -49,10 +45,7 @@ public class Triangle extends TwoD{
     return area;
     }
     
-    /**
-     *
-     * @return
-     */
+  
     @Override
     public double getPerimeter() {
     

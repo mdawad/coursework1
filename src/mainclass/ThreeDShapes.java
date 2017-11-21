@@ -12,20 +12,13 @@ package mainclass;
  * @author M00611053
  */
 public abstract class ThreeDShapes extends Shape{
-    
-    /**
-     *
-     * @param name
-     */
-    public ThreeDShapes(String name)
+   
+    public ThreeDShapes(String name, int noOfSides)
     {
-        super(name);
+        super(name, noOfSides);
     }
     
-    /**
-     *
-     * @return
-     */
+  
     public abstract double getSa();
 
     /**

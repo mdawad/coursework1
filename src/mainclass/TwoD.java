@@ -8,35 +8,15 @@ package mainclass;
  */
 public abstract class TwoD extends Shape {
 
-    /**
-     *
-     * @param name
-     */
-    public TwoD (String name) 
+    public TwoD (String name, int noOfSides) 
     {
-          super(name);
+          super(name, noOfSides);
     }
-    
-    /**
-     *
-     * @return
-     */
+  
     public abstract double getArea();
 
-    /**
-     *
-     * @return
-     */
+
     public abstract double getPerimeter();
-
-    void displayDescription() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-  
-    
-
-   
-    }
+}
         
    

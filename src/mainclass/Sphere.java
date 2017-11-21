@@ -7,41 +7,27 @@ package mainclass;
 
 // Awad M00611053
 
-/**
- *
- * @author M00611053
- */
+
 public class Sphere extends ThreeDShapes{
     
         double Radius;
     
-    /**
-     *
-     * @param name
-     * @param radius
-     */
+ 
     public Sphere(String name, double radius) {
-        super(name);
+        super(name, 0);
         this.Radius = radius;
     }
 
-    /**
-     *
-     * @return
-     */
+  
     @Override
     public double getSa() {
-        double area = 4 * 3.14 * Radius * Radius;
+        double area = (4 * Math.PI * Radius * Radius);
         return area;
     }
 
-    /**
-     *
-     * @return
-     */
     @Override
     public double getVolume() {
-        double volume = 4 * 3.12 * Radius * Radius * Radius;
+        double volume = ((4/3 )* Math.PI * Radius * Radius * Radius);
         return volume;
     }
 

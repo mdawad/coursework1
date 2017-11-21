@@ -13,13 +13,11 @@ class Server {
     Socket socket;
     
  public static void main(String argv[]) throws Exception {
-  //String clientSentence;
-  //String capitalizedSentence;
-  
+ 
 
   while (true) {
       
-   ServerSocket welcomeSocket = new ServerSocket(6789);
+   ServerSocket welcomeSocket = new ServerSocket(1234);
    Socket connectionSocket = welcomeSocket.accept();
    
     ObjectInputStream objin=new ObjectInputStream(connectionSocket.getInputStream());
@@ -55,15 +53,15 @@ class Server {
    }
    
     else if(shape instanceof ThreeDShapes){
-                ThreeDShapes s3d=(ThreeDShapes)shape;
-                double surfarea=s3d.getSa();
-                double vol=s3d.getVolume();
-                if (s3d instanceof Sphere){
-                    Sphere s = (Sphere)s3d;
+                ThreeDShapes threeD=(ThreeDShapes)shape;
+                double surfarea=threeD.getSa();
+                double vol=threeD.getVolume();
+                if (threeD instanceof Sphere){
+                    Sphere s = (Sphere)threeD;
                     System.out.println("Received radius of Sphere- "+s.Radius);
                 }
-                if (s3d instanceof Cylinder){
-                    Cylinder c=(Cylinder)s3d;
+                if (threeD instanceof Cylinder){
+                    Cylinder c=(Cylinder)threeD;
                     System.out.println("Received radius of Cylinder- "+c.Radius);
                     System.out.println("Received height of Cylinder- "+c.Height);
                 }
@@ -74,7 +72,4 @@ class Server {
  }
  }
 
-    void displayDescription() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

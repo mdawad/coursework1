@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package mainclass;
+
 import java.io.*;
 import java.net.*;
 import java.util.Scanner;
@@ -15,7 +16,7 @@ class Client {
      int Choicedimension =0;
      int Choiceshape = 0;
 
-  Socket clientSocket = new Socket("localhost", 5555);
+  Socket clientSocket = new Socket("localhost", 1234);
   
   //DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
   //BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
@@ -25,7 +26,7 @@ class Client {
   
   while(true){
       
-      System.out.println("Select : \n 1. 2D Shapes \n 2. 3D shapes \n 3.Exit");
+      System.out.println("Select : \n 1. 2D \n 2. 3D  \n 3. Exit");
       Choicedimension = in.nextInt();
   if (Choicedimension == 1)
   {
@@ -123,15 +124,12 @@ if (Choicedimension == 2)
   }
 
 if (Choicedimension == 3){
-   System.out.print("Exiting...");
+   System.out.print("Bye");
    TimeUnit.SECONDS.sleep(2);
    break;
 }
  }
-//sentence = inFromUser.read Line();
-  //outToServer.writeBytes(sentence + '\n');
-  //modifiedSentence = inFromServer.readLine();
-  //System.out.println("FROM SERVER: " + modifiedSentence);
+
   clientSocket.close();
  
 }}

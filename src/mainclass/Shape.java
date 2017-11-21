@@ -10,21 +10,33 @@ package mainclass;
  *
  * @author M00611053
  */
-public abstract class Shape implements java.io.Serializable{
+
     
-    
-    private  String _name;
-    
-    /**
-     *
-     * @param name
-     */
-    public Shape(String name){
-        _name = name;
-        
+import java.io.Serializable;
+
+/**
+ *
+ * @author M00607592
+ */
+public abstract class Shape implements Serializable {
+
+    private final int noOfSides;
+    private final String name;
+
+    public int getNoOfSides() {
+        return noOfSides;
     }
-    
 
+    public Shape(String name, int noOfSides) {
+        this.name = name;
+        this.noOfSides = noOfSides;
+    }
 
-    
+    public String getName() {
+        return name;
+    }
+
+    public void displayDescription() {
+        System.out.println("I'm a shape named " + name);
+    }
 }
