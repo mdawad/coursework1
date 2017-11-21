@@ -16,13 +16,13 @@ class Client {
      int Choicedimension =0;
      int Choiceshape = 0;
 
-  Socket clientSocket = new Socket("localhost", 1234);
+  Socket clientS = new Socket("localhost", 1234);
   
   //DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
   //BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
   
-  ObjectOutputStream objsend =new ObjectOutputStream(clientSocket.getOutputStream());
-  ObjectInputStream objin=new ObjectInputStream(clientSocket.getInputStream());
+  ObjectOutputStream objsend =new ObjectOutputStream(clientS.getOutputStream());
+  ObjectInputStream objin=new ObjectInputStream(clientS.getInputStream());
   
   while(true){
       
@@ -35,53 +35,53 @@ class Client {
       
       if (Choiceshape == 1)
       {
-        System.out.println("You have selected Rectangle");
+        System.out.println("Rectangle");
                 System.out.println("What is the name of the Rectangle");
                 String rectname=in.next();
-                System.out.println("Enter the length of the Rectangle");
+                System.out.println("Enter the length");
                 Double rectlength=in.nextDouble();
-                System.out.println("Enter the breadth of the Rectangle");
+                System.out.println("Enter the breadth");
                 Double rectbreadth=in.nextDouble();
                 Rectangle r=new Rectangle(rectname, rectlength, rectbreadth);
                 objsend.writeObject(r);
                 double rectarea =r.getArea();
                 double rectperimeter = r.getPerimeter();
-                System.out.println("The area of the triangle is: " + rectarea);
-                System.out.println("The perimeter of the triangle is: " + rectperimeter);
+                System.out.println("Area of the triangle is: " + rectarea);
+                System.out.println("Perimeter of the triangle is: " + rectperimeter);
                 
       }      
       if (Choiceshape == 2)
       {
-          System.out.println("You have selected Circle");
+          System.out.println("Circle");
           System.out.println("What is the name of the Circle");
           String circlename = in.next();
-          System.out.println("Enter the radius of the circle: ");
+          System.out.println("Radius of the circle: ");
           double circleradius = in.nextDouble();
           Circle c =new Circle(circlename, circleradius);
           objsend.writeObject(c);
           double circlearea = c.getArea();
           double circleperimeter = c.getPerimeter();
-          System.out.println("The area of the cricle is: " + circlearea);
-          System.out.println("The perimeter of the cricle is: " + circleperimeter);
+          System.out.println("Area of the cricle is: " + circlearea);
+          System.out.println("Perimeter of the cricle is: " + circleperimeter);
           
       }
       
       
       if (Choiceshape == 3)
        {
-          System.out.println("You have selected Triangle");
+          System.out.println("Triangle");
           System.out.println("What is the name of the Triangle");
           String tname = in.next();
-          System.out.println("Enter the first side of the triangle: ");
+          System.out.println("Enter the first side:");
           double tside1 = in.nextDouble();
-          System.out.println("Enter the second side of the triangle: ");
+          System.out.println("Enter the second side:");
           double tside2 = in.nextDouble();
-          System.out.println("Enter the third side of the triangle: ");
+          System.out.println("Enter the third side:");
           double tside3 = in.nextDouble();
           
           Triangle t = new Triangle (tname, tside1, tside2, tside3);
-          System.out.println("The area of the triangle is: " +t.getArea());
-          System.out.println("The Perimeter of the triangle is: " +t.getPerimeter());
+          System.out.println("Area of the triangle is: " +t.getArea());
+          System.out.println("Perimeter of the triangle is: " +t.getPerimeter());
        }
   }
   
@@ -91,26 +91,26 @@ if (Choicedimension == 2)
       Choiceshape = in.nextInt();
       if (Choiceshape == 1)
       {
-          System.out.println("You have selected Sphere");
+          System.out.println("Sphere");
           System.out.println("Enter the Name of the sphere :");
           String sname = in.next();
-          System.out.println("Enter the radius of the sphere :");
+          System.out.println("Enter the radius :");
           double sradius = in.nextDouble();
           
           Sphere s = new Sphere (sname, sradius);
-          System.out.println("The surface area of the sphere is: " + s.getSa());
-          System.out.println("The volume of the sphere is: " + s.getVolume());
+          System.out.println("The surface area is: " + s.getSa());
+          System.out.println("The volume is: " + s.getVolume());
       }
       
       if (Choiceshape == 2)
       {
-          System.out.println("You have selected Cyliinder");
+          System.out.println("Cyliinder");
           
           System.out.println("Enter the Name of the Cylinder :");
           String cname = in.next();
-          System.out.println("Enter the radius of the Cylinder :");
+          System.out.println("Enter the radius:");
           double cradius = in.nextDouble();
-          System.out.println("Enter the height of the Cylinder :");
+          System.out.println("Enter the height:");
           double cheight = in.nextDouble();
           Cylinder c = new Cylinder (cname, cradius, cheight);
           
@@ -130,6 +130,6 @@ if (Choicedimension == 3){
 }
  }
 
-  clientSocket.close();
+  clientS.close();
  
 }}
