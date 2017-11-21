@@ -8,10 +8,6 @@ package mainclass;
  
 import java.io.Serializable;
 
-/**
- *
- * @author M00607592
- */
 public abstract class Shape implements Serializable {
 
     private final int noOfSides;
