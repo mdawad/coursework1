@@ -21,7 +21,7 @@ class Client {
   //DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
   //BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
   
-  ObjectOutputStream objsend =new ObjectOutputStream(clientS.getOutputStream());
+  ObjectOutputStream objout =new ObjectOutputStream(clientS.getOutputStream());
   ObjectInputStream objin=new ObjectInputStream(clientS.getInputStream());
   
   while(true){
@@ -43,7 +43,7 @@ class Client {
                 System.out.println("Enter the breadth");
                 Double rectbreadth=in.nextDouble();
                 Rectangle r=new Rectangle(rectname, rectlength, rectbreadth);
-                objsend.writeObject(r);
+                objout.writeObject(r);
                 double rectarea =r.getArea();
                 double rectperimeter = r.getPerimeter();
                 System.out.println("Area of the triangle is: " + rectarea);
@@ -58,7 +58,7 @@ class Client {
           System.out.println("Radius of the circle: ");
           double circleradius = in.nextDouble();
           Circle c =new Circle(circlename, circleradius);
-          objsend.writeObject(c);
+          objout.writeObject(c);
           double circlearea = c.getArea();
           double circleperimeter = c.getPerimeter();
           System.out.println("Area of the cricle is: " + circlearea);
@@ -114,8 +114,8 @@ if (Choicedimension == 2)
           double cheight = in.nextDouble();
           Cylinder c = new Cylinder (cname, cradius, cheight);
           
-          System.out.println("The surface area of the Cylinder is: " + c.getSa());
-          System.out.println("The volume of the Cylinder is: " + c.getVolume());
+          System.out.println("The surface area is: " + c.getSa());
+          System.out.println("The volume is: " + c.getVolume());
          
       }
       
