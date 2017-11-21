@@ -5,11 +5,20 @@
  */
 package mainclass;
 // Awad M00611053
+
+/**
+ *
+ * @author M00611053
+ */
 public abstract class Shape implements java.io.Serializable{
     
     
     private  String _name;
     
+    /**
+     *
+     * @param name
+     */
     public Shape(String name){
         _name = name;
         
