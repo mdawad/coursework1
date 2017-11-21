@@ -1,10 +1,7 @@
 package mainclass;
 //Awad M00611053
 
-/**
- *
- * @author M00611053
- */
+
 public class Circle extends TwoD {
 
 

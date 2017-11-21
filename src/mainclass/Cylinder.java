@@ -1,9 +1,5 @@
 package mainclass;
-
-/**
- *
- * @author M00611053
- */
+//Awad M00611053
 public class Cylinder extends ThreeDShapes {
     
     double Radius;

@@ -2,10 +2,6 @@
 package mainclass;
 //Awad M00611053
 
-/**
- *
- * @author M00611053
- */
 public abstract class TwoD extends Shape {
 
     public TwoD (String name, int noOfSides) 

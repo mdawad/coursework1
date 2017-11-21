@@ -5,13 +5,7 @@
  */
 package mainclass;
 // Awad M00611053
-
-/**
- *
- * @author M00611053
- */
-
-    
+ 
 import java.io.Serializable;
 
 /**

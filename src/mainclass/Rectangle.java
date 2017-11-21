@@ -1,21 +1,13 @@
 package mainclass;
    //Awad M00611053
 
-/**
- *
- * @author M00611053
- */
+
 public class Rectangle extends TwoD{
 
         double length;
         double breadth;
 
-    /**
-     *
-     * @param name
-     * @param l
-     * @param b
-     */
+ 
     public Rectangle(String name, double l, double b) {
         super(name,4);
         length = l;
