@@ -4,24 +4,12 @@
  * and open the template in the editor.
  */
 package mainclass;
-
-/**
- *
- * @author M00611053
- */
 public class Triangle extends TwoD{
  
        double side1;
        double side2;
        double side3;
        
-    /**
-     *
-     * @param name
-     * @param s1
-     * @param s2
-     * @param s3
-     */
     public Triangle(String name, double s1, double s2, double s3) {
         super(name);
        side1 = s1;
@@ -29,19 +17,11 @@ public class Triangle extends TwoD{
        side3 = s3;
     }
   
-    /**
-     *
-     */
     public void displayDescription() {
         super.displayDescription();
         System.out.println("\t I'm a triangle");
     }
-
-    /**
-     *
-     * @return
-     */
-    @Override
+       @Override
     public double getArea(){
     
     double x = (side1+side2+side3)/2;
@@ -49,11 +29,7 @@ public class Triangle extends TwoD{
     return area;
     }
     
-    /**
-     *
-     * @return
-     */
-    @Override
+       @Override
     public double getPerimeter() {
     
     double perimeter = side1+side2+side3;

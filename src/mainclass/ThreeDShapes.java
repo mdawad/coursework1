@@ -6,32 +6,15 @@
 package mainclass;
 
 //Awad M00611053
-
-/**
- *
- * @author M00611053
- */
 public abstract class ThreeDShapes extends Shape{
     
-    /**
-     *
-     * @param name
-     */
+   
     public ThreeDShapes(String name)
     {
         super(name);
     }
     
-    /**
-     *
-     * @return
-     */
     public abstract double getSa();
-
-    /**
-     *
-     * @return
-     */
     public abstract double getVolume();
     
 }
